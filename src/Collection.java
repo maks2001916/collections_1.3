@@ -15,7 +15,6 @@ public class Collection {
         } else if (collekts.get(key).equals(meaning)) {
             throw new RuntimeException();
         } else if (!collekts.get(key).equals(meaning)) {
-            collekts.remove(key);
             collekts.put(key, meaning);
         }
 
