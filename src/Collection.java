@@ -9,9 +9,9 @@ public class Collection {
     }
 
     public void addCollektion(String key, Integer meaning) throws WrongCollectionException {
-        if (collektions.get(key).equals(meaning)) {
+        if (collektions.containsKey(key) && collektions.get(key).equals(meaning)) {
             throw new WrongCollectionException("такое значение уже содержится в коллекции");
-        } else if (!collektions.get(key).equals(meaning)) {
+        } else {
             collektions.put(key, meaning);
         }
 
